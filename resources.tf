@@ -9,7 +9,7 @@ module "windowsservers" {
   vnet_subnet_id      = module.network.vnet_subnets[0]
   //depends_on = [azurerm_resource_group.irek-example]
 }
-module "windowsservers2" {
+module "windowsservers_sec" {
   source              = "Azure/compute/azurerm"
   resource_group_name = azurerm_resource_group.irek-example.name
   is_windows_image    = true
